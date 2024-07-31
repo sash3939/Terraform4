@@ -200,11 +200,21 @@ module "vpc_dev" {
 ### Задание 7*
 
 1. Разверните у себя локально vault, используя docker-compose.yml в проекте.
+
+![docker compose install vault](https://github.com/user-attachments/assets/1d0428fe-3b52-43bd-b23e-735f2658d37a)
+---
+![Vault](https://github.com/user-attachments/assets/3e38ed14-4286-4df3-9315-632013925dd0)
+---
+
 2. Для входа в web-интерфейс и авторизации terraform в vault используйте токен "education".
 3. Создайте новый секрет по пути http://127.0.0.1:8200/ui/vault/secrets/secret/create
 Path: example  
 secret data key: test 
-secret data value: congrats!  
+secret data value: congrats!
+
+![Vault new secret](https://github.com/user-attachments/assets/29a60706-6dd3-46ed-a67a-cfd238a46be2)
+---
+ 
 4. Считайте этот секрет с помощью terraform и выведите его в output по примеру:
 ```
 provider "vault" {
@@ -223,7 +233,16 @@ output "vault_example" {
 Можно обратиться не к словарю, а конкретному ключу:
 terraform console: >nonsensitive(data.vault_generic_secret.vault_example.data.<имя ключа в секрете>)
 ```
+![Vault output](https://github.com/user-attachments/assets/7f68bad1-fcbe-43a0-a82a-25c0860386e9)
+---
+![Vault nonsensitive](https://github.com/user-attachments/assets/354c206a-16ea-4936-a9e9-43088268d10f)
+---
+
+
 5. Попробуйте самостоятельно разобраться в документации и записать новый секрет в vault с помощью terraform. 
+
+![Vault new secret2](https://github.com/user-attachments/assets/8bcb40a5-3639-4082-8f6c-b249720707ac)
+---
 
 ### Задание 8*
 Попробуйте самостоятельно разобраться в документаци и с помощью terraform remote state разделить root модуль на два отдельных root-модуля: создание VPC , создание ВМ . 
