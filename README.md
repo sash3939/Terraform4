@@ -171,10 +171,32 @@ module "vpc_dev" {
 3. Используя оба модуля, создайте кластер example из одного хоста, а затем добавьте в него БД test и пользователя app. Затем измените переменную и превратите сингл хост в кластер из 2-х серверов.
 4. Предоставьте план выполнения и по возможности результат. Сразу же удаляйте созданные ресурсы, так как кластер может стоить очень дорого. Используйте минимальную конфигурацию.
 
+Файл [tplan](https://github.com/sash3939/Terraform4/blob/main/task5/tplan)
+
+Если HA=false
+
+![If HA false](https://github.com/user-attachments/assets/104ce0c9-ea78-4fde-a94e-bad8ec90448b)
+---
+Если HA=true
+
+![If HA true](https://github.com/user-attachments/assets/9de9a37b-bc38-4b91-ac84-cb047cab4ac4)
+---
+
+Невозможно продолжить из-за ошибки создания кластера
+
+![Cluster not create](https://github.com/user-attachments/assets/d7a9f1a9-bd64-481b-8743-7e589f43bd3e)
+---
+
+
 ### Задание 6*
 1. Используя готовый yandex cloud terraform module и пример его вызова(examples/simple-bucket): https://github.com/terraform-yc-modules/terraform-yc-s3 .
 Создайте и не удаляйте для себя s3 бакет размером 1 ГБ(это бесплатно), он пригодится вам в ДЗ к 5 лекции.
 
+![YC bucketS3](https://github.com/user-attachments/assets/b4b5f50d-ff13-4e8b-ab43-baf9ed3bf97f)
+---
+
+![terraform bucket s3](https://github.com/user-attachments/assets/fd703bde-0eeb-48ac-b3ed-33da0572d98f)
+---
 ### Задание 7*
 
 1. Разверните у себя локально vault, используя docker-compose.yml в проекте.
