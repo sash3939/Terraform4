@@ -159,6 +159,10 @@ module "vpc_dev" {
 
 Код описан в каталоге [task4](https://github.com/sash3939/Terraform4/tree/main/task4)
 
+![Plan_task4](https://github.com/user-attachments/assets/9833a1d1-dc89-440e-9688-ee70dfcf9519)
+---
+![YC CLI](https://github.com/user-attachments/assets/7e55b1b1-ed7e-494b-929e-6a4a5bc3483b)
+---
 
 ### Задание 5*
 
