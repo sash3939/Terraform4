@@ -93,10 +93,43 @@ module "vpc_dev" {
 4. Импортируйте всё обратно. Проверьте terraform plan. Значимых(!!) изменений быть не должно.
 Приложите список выполненных команд и скриншоты процессы.
 
+1. terraform state list
+
+![state list](https://github.com/user-attachments/assets/ad5c17b5-4f00-4466-a795-0878239b006d)
+---
+Поиск id
+terraform state show 'module.....' | grep 'id'
+2. terraform state rm "module.vpc_dev.yandex_vpc_subnet.vpc_sub"
+   terraform state rm "module.vpc_dev.yandex_vpc_network.vpc"
+
+![delete module vpc](https://github.com/user-attachments/assets/dd4c27a7-97b6-4f27-a145-7c22e84fed9b)
+---
+
+3. Команды аналогично п.2 с названиями модулей vm
+
+![delete module vm](https://github.com/user-attachments/assets/28b9d4ad-663a-4625-973e-84d8b4612c04)
+---
+
 ## Дополнительные задания (со звёздочкой*)
 
 **Настоятельно рекомендуем выполнять все задания со звёздочкой.**   Они помогут глубже разобраться в материале.   
 Задания со звёздочкой дополнительные, не обязательные к выполнению и никак не повлияют на получение вами зачёта по этому домашнему заданию. 
+
+4.  terraform import "name module" <id module>
+Example, terraform import "module.marketing_vm.yandex_compute_instance.vm[0]" fhmp0d6mi6oi8jb5gppu
+
+![import vpc network](https://github.com/user-attachments/assets/ca933d80-93d8-44a1-a060-9d45cb5c023e)
+---
+![plan after import](https://github.com/user-attachments/assets/4c729785-d1bd-4acc-887e-8b6ba430a2f4)
+---
+![import vpc subnet](https://github.com/user-attachments/assets/fbe8808d-e39b-4fbf-bc47-d74136120613)
+---
+![import analytics vm](https://github.com/user-attachments/assets/5dbbc9cc-8202-454c-b678-8209132836f6)
+---
+![import marketing vm](https://github.com/user-attachments/assets/1ba17d45-368d-4add-8693-f765b95ee63d)
+---
+
+
 
 
 ### Задание 4*
