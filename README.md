@@ -48,10 +48,28 @@
 ### Задание 2
 
 1. Напишите локальный модуль vpc, который будет создавать 2 ресурса: **одну** сеть и **одну** подсеть в зоне, объявленной при вызове модуля, например: ```ru-central1-a```.
+
+Написал локальный модуль с одной сетью и одной подсетью в зоне ru-central1-a.
+   
 2. Вы должны передать в модуль переменные с названием сети, zone и v4_cidr_blocks.
+- В модуле используются переменные с именем сети, зоны и cidr блок
+
+![vpc-variables](https://github.com/user-attachments/assets/e2e723b8-7165-494f-9dbf-fc2a5659329e)
+---
+
 3. Модуль должен возвращать в root module с помощью output информацию о yandex_vpc_subnet. Пришлите скриншот информации из terraform console о своем модуле. Пример: > module.vpc_dev  
+
+![module vpc_dev](https://github.com/user-attachments/assets/9c65f7bf-eb62-4fd2-a57f-3740b4d36658)
+---
+
 4. Замените ресурсы yandex_vpc_network и yandex_vpc_subnet созданным модулем. Не забудьте передать необходимые параметры сети из модуля vpc в модуль с виртуальной машиной.
-5. Сгенерируйте документацию к модулю с помощью terraform-docs.
+- Заменил сетевые ресурсы созданным модулем
+- В root модуле описал outup
+
+![output root module](https://github.com/user-attachments/assets/bc12bff2-0550-4873-839b-ed725ba76aed)
+---
+
+6. Сгенерируйте документацию к модулю с помощью terraform-docs.
  
 Пример вызова
 
@@ -63,6 +81,8 @@ module "vpc_dev" {
   cidr = "10.0.1.0/24"
 }
 ```
+- Установка terraform-docs и перенаправление в файл. Документация сгенерирована по пути vpc/README.md
+## docker run --rm --volume "$(pwd):/terraform-docs" -u $(id -u) quay.io/terraform-docs/terraform-docs:0.18.0 markdown /terraform-docs > README.md
 
 ### Задание 3
 1. Выведите список ресурсов в стейте.
