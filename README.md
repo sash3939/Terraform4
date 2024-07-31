@@ -130,8 +130,6 @@ Example, terraform import "module.marketing_vm.yandex_compute_instance.vm[0]" fh
 ---
 
 
-
-
 ### Задание 4*
 
 1. Измените модуль vpc так, чтобы он мог создать подсети во всех зонах доступности, переданных в переменной типа list(object) при вызове модуля.  
@@ -158,6 +156,9 @@ module "vpc_dev" {
 ```
 
 Предоставьте код, план выполнения, результат из консоли YC.
+
+Код описан в каталоге [task4](https://github.com/sash3939/Terraform4/tree/main/task4)
+
 
 ### Задание 5*
 
