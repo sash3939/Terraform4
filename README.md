@@ -84,6 +84,8 @@ module "vpc_dev" {
 - Установка terraform-docs и перенаправление в файл. Документация сгенерирована по пути vpc/README.md
 ## docker run --rm --volume "$(pwd):/terraform-docs" -u $(id -u) quay.io/terraform-docs/terraform-docs:0.18.0 markdown /terraform-docs > README.md
 
+[README.MD]https://github.com/sash3939/Terraform4/blob/main/vpc/README.md
+
 ### Задание 3
 1. Выведите список ресурсов в стейте.
 2. Полностью удалите из стейта модуль vpc.
