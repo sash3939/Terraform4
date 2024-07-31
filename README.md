@@ -30,6 +30,21 @@
 В случае использования MacOS вы получите ошибку "Incompatible provider version" . В этом случае скачайте remote модуль локально и поправьте в нем версию template провайдера на более старую.
 ------
 
+![analutics nginx](https://github.com/user-attachments/assets/eb0ce094-21fa-488e-89b2-90389db3bbe0)
+---
+![marketing nginx](https://github.com/user-attachments/assets/e021f1c3-9a0c-45b4-a952-fe07ce332fc0)
+---
+
+![YC analytics](https://github.com/user-attachments/assets/54798119-25d6-4aff-98b4-cd60e8e2bd1d)
+---
+![YC marketing](https://github.com/user-attachments/assets/c5faf8ae-608e-4c0c-a432-1221a8f79273)
+---
+
+![module marketing_vm](https://github.com/user-attachments/assets/ca339701-38e1-43ea-a38f-35c3b864e1db)
+---
+![module analytics_vm](https://github.com/user-attachments/assets/bedcd0a1-4bb8-41c7-84f8-1236b1a1a91e)
+---
+
 ### Задание 2
 
 1. Напишите локальный модуль vpc, который будет создавать 2 ресурса: **одну** сеть и **одну** подсеть в зоне, объявленной при вызове модуля, например: ```ru-central1-a```.
